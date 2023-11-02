@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="PinPageOne">1</string>
+    <string name="PinPageTwo">2</string>
+    <string name="PinPageThree">3</string>
+    <string name="PinPageFour">4</string>
+    <string name="PinPageFive">5</string>
+    <string name="PinPageSix">6</string>
+    <string name="PinPageSeven">7</string>
+    <string name="PinPageEight">8</string>
+    <string name="PinPageNine">9</string>
+    <string name="PinPageZero">0</string>
+</resources>
