@@ -8,14 +8,50 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="60dp"
         android:orientation="vertical">
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_gravity="top"
             android:layout_weight="1"
+            android:gravity="center|center"
             android:orientation="horizontal">
+
+            <android.view.View
+                android:id="@+id/digit_display_01"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:background="@drawable/pin_page_no_digit" />
+
+            <android.view.View
+                android:id="@+id/digit_display_02"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:background="@drawable/pin_page_no_digit" />
+
+            <android.view.View
+                android:id="@+id/digit_display_03"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:background="@drawable/pin_page_no_digit" />
+
+            <android.view.View
+                android:id="@+id/digit_display_04"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:background="@drawable/pin_page_no_digit" />
+
 
         </LinearLayout>
 
@@ -31,28 +67,34 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/pin_pad_01"
                     style="@style/PinPage_Button"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:onClick="onClick"
                     android:text="@string/PinPageOne">
 
                 </Button>
 
                 <Button
+                    android:id="@+id/pin_pad_02"
                     style="@style/PinPage_Button"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:onClick="onClick"
                     android:text="@string/PinPageTwo">
 
                 </Button>
 
                 <Button
+                    android:id="@+id/pin_pad_03"
                     style="@style/PinPage_Button"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:onClick="onClick"
                     android:text="@string/PinPageThree">
 
                 </Button>
@@ -66,28 +108,34 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/pin_pad_04"
                     style="@style/PinPage_Button"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:onClick="onClick"
                     android:text="@string/PinPageFour">
 
                 </Button>
 
                 <Button
+                    android:id="@+id/pin_pad_05"
                     style="@style/PinPage_Button"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:onClick="onClick"
                     android:text="@string/PinPageFive">
 
                 </Button>
 
                 <Button
+                    android:id="@+id/pin_pad_06"
                     style="@style/PinPage_Button"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:onClick="onClick"
                     android:text="@string/PinPageSix">
 
                 </Button>
@@ -102,28 +150,34 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/pin_pad_07"
                     style="@style/PinPage_Button"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:onClick="onClick"
                     android:text="@string/PinPageSeven">
 
                 </Button>
 
                 <Button
+                    android:id="@+id/pin_pad_08"
                     style="@style/PinPage_Button"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:onClick="onClick"
                     android:text="@string/PinPageEight">
 
                 </Button>
 
                 <Button
+                    android:id="@+id/pin_pad_09"
                     style="@style/PinPage_Button"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:onClick="onClick"
                     android:text="@string/PinPageNine">
 
                 </Button>
@@ -137,30 +191,40 @@
                 android:orientation="horizontal">
 
                 <Button
-                    style="@style/PinPage_Button"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"></Button>
-
-                <Button
+                    android:id="@+id/pin_pad_back_space"
                     style="@style/PinPage_Button"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:text="@string/PinPageBackSpace">
+
+
+                </Button>
+
+                <Button
+                    android:id="@+id/pin_pad_00"
+                    style="@style/PinPage_Button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
                     android:text="@string/PinPageZero">
 
                 </Button>
 
                 <Button
+                    android:id="@+id/pin_pad_OK"
                     style="@style/PinPage_Button"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:text="@string/PinPageOk">
 
                 </Button>
 
             </LinearLayout>
-
         </LinearLayout>
 
 

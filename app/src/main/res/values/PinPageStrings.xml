@@ -10,4 +10,6 @@
     <string name="PinPageEight">8</string>
     <string name="PinPageNine">9</string>
     <string name="PinPageZero">0</string>
+    <string name="PinPageOk">OK</string>
+    <string name="PinPageBackSpace">⌫</string>
 </resources>
