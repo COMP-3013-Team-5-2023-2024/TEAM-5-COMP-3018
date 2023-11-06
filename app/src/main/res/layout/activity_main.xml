@@ -1,18 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!--Edit text to enter username-->
+    <EditText
+        android:id="@+id/idEdtUserName"
+        android:layout_width="391dp"
+        android:layout_height="71dp"
+        android:layout_margin="10dp"
+        android:hint="Enter Username" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!--edit text to enter first name-->
+    <EditText
+        android:id="@+id/idEdtFirstName"
+        android:layout_width="391dp"
+        android:layout_height="71dp"
+        android:layout_margin="10dp"
+        android:hint="Enter First Name" />
+
+    <!--edit text to enter last name-->
+    <EditText
+        android:id="@+id/idEdtLastName"
+        android:layout_width="391dp"
+        android:layout_height="71dp"
+        android:layout_margin="10dp"
+        android:hint="Enter Last Name" />
+
+    <!--edit text to enter age-->
+    <EditText
+        android:id="@+id/idEdtAge"
+        android:layout_width="391dp"
+        android:layout_height="71dp"
+        android:layout_margin="10dp"
+        android:hint="Enter Age" />
+
+    <!--edit text to pin-->
+    <EditText
+        android:id="@+id/idEdtPin"
+        android:layout_width="391dp"
+        android:layout_height="71dp"
+        android:layout_margin="10dp"
+        android:hint="Enter Pin" />
+
+    <!--button to register-->
+    <Button
+        android:id="@+id/idBtnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Register"
+        android:textAllCaps="false" />
+
+</LinearLayout>
