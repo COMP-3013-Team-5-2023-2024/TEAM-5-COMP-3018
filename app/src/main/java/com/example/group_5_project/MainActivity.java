@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     // creating variables for our edittext, button and dbhandler
-    private EditText firstNameEdt, lastNameEdt, userNameEdt, pinEdt, ageEdt;
+    private EditText userNameEdt, pinEdt, ageEdt;
     private Button registerBtn;
     private DBHandler dbHandler;
 
@@ -21,8 +21,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // initializing all our variables.
-        firstNameEdt = findViewById(R.id.idEdtFirstName);
-        lastNameEdt = findViewById(R.id.idEdtLastName);
         userNameEdt = findViewById(R.id.idEdtUserName);
         ageEdt = findViewById(R.id.idEdtAge);
         pinEdt = findViewById(R.id.idEdtPin);
@@ -38,26 +36,22 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 // below line is to get data from all edit text fields.
-                String firstName = firstNameEdt.getText().toString();
-                String lastName = lastNameEdt.getText().toString();
                 String userName = userNameEdt.getText().toString();
                 String age = ageEdt.getText().toString();
                 String pin = pinEdt.getText().toString();
 
                 // validating if the text fields are empty or not.
-                if (firstName.isEmpty() && lastName.isEmpty() && userName.isEmpty() && pin.isEmpty() && age.isEmpty()) {
+                if (userName.isEmpty() && pin.isEmpty() && age.isEmpty()) {
                     Toast.makeText(MainActivity.this, "Please enter all the data..", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 // on below line we are calling a method to add new
                 // course to sqlite data and pass all our values to it.
-                dbHandler.addNewUser(userName, firstName, lastName, pin, age);
+                dbHandler.addNewUser(userName, pin, age);
 
                 // after adding the data we are displaying a toast message.
                 Toast.makeText(MainActivity.this, "User is added", Toast.LENGTH_SHORT).show();
-                firstNameEdt.setText("");
-                lastNameEdt.setText("");
                 userNameEdt.setText("");
                 ageEdt.setText("");
                 pinEdt.setText("");

@@ -14,18 +14,14 @@ public class DBHandler extends SQLiteOpenHelper {
     // below int is our database version
     private static final int DB_VERSION = 1;
 
-    // below variable is for our table name.
+    // below variables are for our table names.
     private static final String USER_TABLE_NAME = "user";
+    private static final String PERIOD_HIST_TABLE_NAME = "periodHistory";
 
-    // below are variables for the user table
-    private static final String ID_COL = "id";
+    // below are column names for the tables
+    private static final String USERID_COL = "userId";
 
     private static final String USERNAME_COL = "username";
-
-    private static final String FIRSTNAME_COL = "firstName";
-
-    private static final String LASTNAME_COL = "lastName";
-
     private static final String AGE_COL = "age";
 
     private static final String PIN_COL = "pin";
@@ -38,6 +34,8 @@ public class DBHandler extends SQLiteOpenHelper {
     private static final String BC_START_COL = "bcStartDate";
     private static final String BC_END_COL = "bcEndDate";
 
+    private static final String PERIOD_HIST_ID_COL = "historyId";
+
     // creating a constructor for our database handler.
     public DBHandler(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
@@ -48,10 +46,8 @@ public class DBHandler extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         String userTableQuery = "CREATE TABLE " + USER_TABLE_NAME + " ("
-                + ID_COL + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + USERID_COL + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + USERNAME_COL + " TEXT,"
-                + FIRSTNAME_COL + " TEXT,"
-                + LASTNAME_COL + " TEXT,"
                 + PIN_COL + " TEXT,"
                 + AGE_COL + " INTEGER,"
                 + PERIOD_COL + " INTEGER,"
@@ -62,13 +58,21 @@ public class DBHandler extends SQLiteOpenHelper {
                 + BC_START_COL + " TEXT,"
                 + BC_END_COL + " TEXT)";
 
+        String periodHistoryTableQuery = "CREATE TABLE " + PERIOD_HIST_TABLE_NAME + " ("
+                + USERID_COL + " INTEGER,"
+                + PERIOD_HIST_ID_COL + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + PERIOD_START_COL + " TEXT,"
+                + PERIOD_END_COL + " TEXT,"
+                + " FOREIGN KEY(" + USERID_COL + ") REFERENCES " + USER_TABLE_NAME + "(" + USERID_COL + "))";
+
         // at last we are calling a exec sql
         // method to execute above sql query
         db.execSQL(userTableQuery);
+        db.execSQL(periodHistoryTableQuery);
     }
 
     // this method is use to add new course to our sqlite database.
-    public void addNewUser(String userName, String firstName, String lastName, String pin, String age) {
+    public void addNewUser(String userName, String pin, String age) {
 
         // on below line we are creating a variable for
         // our sqlite database and calling writable method
@@ -83,8 +87,6 @@ public class DBHandler extends SQLiteOpenHelper {
         // along with its key and value pair.
 
         userValues.put(USERNAME_COL, userName);
-        userValues.put(FIRSTNAME_COL, firstName);
-        userValues.put(LASTNAME_COL, lastName);
         userValues.put(AGE_COL, Integer.valueOf(age));
         userValues.put(PIN_COL, pin);
 
@@ -100,6 +102,7 @@ public class DBHandler extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // this method is called to check if the table exists already.
         db.execSQL("DROP TABLE IF EXISTS " + USER_TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + PERIOD_HIST_TABLE_NAME);
         onCreate(db);
     }
 }
