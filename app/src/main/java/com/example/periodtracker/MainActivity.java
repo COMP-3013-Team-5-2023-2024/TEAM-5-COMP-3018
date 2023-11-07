@@ -1,4 +1,4 @@
-package com.example.group_5_project;
+package com.example.periodtracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
