@@ -6,11 +6,18 @@
     </style>
 
     <style name="Theme.Group_5_project" parent="Base.Theme.Group_5_project" />
-    <!-- Need to figure out how to do themes -->
+
+
     <style name="PinPage_Button" parent="Widget.MaterialComponents.Button">
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/main_pink</item>
         <item name="android:textSize">20dp</item>
         <item name="android:background">@android:color/transparent</item>
     </style>
-    
+
+    <style name="PinPage_Text" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textColor">@color/main_pink</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
 </resources>
