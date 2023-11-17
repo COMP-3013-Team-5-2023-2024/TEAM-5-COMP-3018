@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.group_5_project"
+    namespace = "com.example.periodtracker"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.group_5_project"
+        applicationId = "com.example.periodtracker"
         minSdk = 24
         targetSdk = 33
         versionCode = 1
