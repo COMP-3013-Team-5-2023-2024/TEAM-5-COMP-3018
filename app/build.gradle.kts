@@ -11,7 +11,6 @@ sonarqube {
         property("sonar.organization", "comp-3013-team-5-2023-2024")
         property("sonar.projectKey", "COMP-3013-Team-5-2023-2024_TEAM-5-COMP-3018")
         property("sonar.projectName", "TEAM-5-COMP-3018")
-        property("sonar.login", "662e04f191a321a2b32422058b030d90686dab87")
 
     }
 }
