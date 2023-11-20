@@ -8,11 +8,13 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.Serializable;
+
 
 public class PinPage extends AppCompatActivity implements View.OnClickListener {
 
     public static final int PIN_LENGTH = 4;
-    View[] dots = new View[4];
+    private final View[] dots = new View[4];
     private String pinToTest = "";
     private PinPageState saveCheck;
 
@@ -28,7 +30,14 @@ public class PinPage extends AppCompatActivity implements View.OnClickListener {
         dots[3] = findViewById(R.id.digit_display_04);
 
         // need to check to see what type of application they want
-        saveCheck = PinPageState.SAVE;
+
+        Serializable check = getIntent().getSerializableExtra("pinPageState");
+        if (check != null) {
+
+            saveCheck = (PinPageState) getIntent().getSerializableExtra("pinPageState");
+        } else {
+            saveCheck = PinPageState.SAVE;
+        }
     }
 
     @Override
@@ -103,7 +112,7 @@ public class PinPage extends AppCompatActivity implements View.OnClickListener {
         }
     }
 
-    
+
     // TODO should be part of another class
     private String getStoredPin() {
         // need to actually implement this thing
@@ -175,7 +184,7 @@ public class PinPage extends AppCompatActivity implements View.OnClickListener {
         }
     }
 
-    public enum PinPageState {
+    public enum PinPageState implements Serializable {
         SAVE,
         CHECK
     }
