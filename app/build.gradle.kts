@@ -1,5 +1,18 @@
 plugins {
     id("com.android.application")
+    id("jacoco")
+    id("org.sonarqube") version "3.5.0.2730"
+}
+
+sonarqube {
+    properties {
+        property("sonar.coverage.jacoco.xmlReportPaths", "build/reports/coverage/androidTest/debug/connected/report.xml")
+        property("sonar.host.url", "https://sonarcloud.io")
+        property("sonar.organization", "comp-3013-team-5-2023-2024")
+        property("sonar.projectKey", "COMP-3013-Team-5-2023-2024_TEAM-5-COMP-3018")
+        property("sonar.projectName", "TEAM-5-COMP-3018")
+
+    }
 }
 
 android {
@@ -23,7 +36,14 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            enableAndroidTestCoverage  = true
+            enableUnitTestCoverage = true
         }
+        debug {
+            enableAndroidTestCoverage  = true
+            enableUnitTestCoverage = true
+        }
+
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -40,3 +60,10 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
+
+
+
+jacoco{
+    toolVersion = "0.8.9"
+}
+
