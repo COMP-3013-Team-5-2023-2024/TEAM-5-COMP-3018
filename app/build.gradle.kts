@@ -21,7 +21,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.periodtracker"
-        minSdk = 24
+        minSdk = 32
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"

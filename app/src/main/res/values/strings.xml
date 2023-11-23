@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Group_5_project</string>
+
+    <string name="notification_channel_ID">DiscreteNotifications</string>
+    <string name="notification_channel_name">Discrete Notifications</string>
+    <string name="notification_channel_description">Displays discrete notifications</string>
+    <string name="notification_content">You have a new notification.</string>
 </resources>
