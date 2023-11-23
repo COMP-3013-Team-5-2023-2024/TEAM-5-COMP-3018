@@ -30,6 +30,9 @@
 
         <activity android:name=".SymptomsActivity" android:screenOrientation="portrait">
         </activity>
+        <activity
+            android:name=".SymptomsInputActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

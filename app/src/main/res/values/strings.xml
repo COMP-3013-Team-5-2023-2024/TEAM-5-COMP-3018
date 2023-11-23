@@ -14,5 +14,9 @@
     <string name="cravings_label">Cravings</string>
     <string name="tender_label">Tender Breasts</string>
 
+    <string name="symptoms_input">Symptoms Input</string>
+    <string name="symptoms_text">Type your symptoms here.</string>
+    <string name="mood_text">Type your mood here.</string>
+
     <string name="save_label">Save</string>
 </resources>
