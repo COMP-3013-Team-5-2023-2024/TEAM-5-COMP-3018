@@ -1,4 +1,4 @@
-package com.example.group_5_project;
+package com.example.periodtracker;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,6 +9,8 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.group_5_project.R;
 
 public class MainActivity extends AppCompatActivity {
 

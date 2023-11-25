@@ -1,4 +1,4 @@
-package com.example.group_5_project;
+package com.example.periodtracker;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.group_5_project.R;
 
 import java.io.Serializable;
 

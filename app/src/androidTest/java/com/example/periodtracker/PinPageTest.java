@@ -1,4 +1,4 @@
-package com.example.group_5_project;
+package com.example.periodtracker;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
@@ -9,6 +9,8 @@ import static org.junit.Assert.fail;
 
 import androidx.test.core.app.ActivityScenario;
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner;
+
+import com.example.group_5_project.R;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
