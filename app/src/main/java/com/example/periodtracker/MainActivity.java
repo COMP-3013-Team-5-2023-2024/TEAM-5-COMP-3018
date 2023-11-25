@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.group_5_project.R;
 
 public class MainActivity extends AppCompatActivity {
-
+    // TODO (matthew fletcher) this activity can be changed at the moment this is just here so that you can access the pin page
     public static final int MY_REQUEST_CODE = 1;
     ActivityResultLauncher<Intent> activityResultLauncher;
 

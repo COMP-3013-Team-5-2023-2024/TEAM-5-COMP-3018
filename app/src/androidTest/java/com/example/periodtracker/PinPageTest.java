@@ -32,7 +32,7 @@ public class PinPageTest {
 
     @Test
     public void check_with_with_invalid_pin() {
-        // TODO add method to make the database interact correctly
+        // TODO (matthew fletcher) add method to make the database interact correctly
         // pin code is currently 2345
         try {
             ActivityScenario.launch(PinPage.class);
@@ -49,13 +49,13 @@ public class PinPageTest {
         // page should still be visible
         onView(withId(R.id.pin_pad_01));
 
-        // TODO should also check if the background resource is correct
+        // TODO (matthew fletcher) should also check if the background resource is correct
     }
 
 
     @Test
     public void check_with_valid_pin() {
-        // TODO add method to make the database interact correctly
+        // TODO (matthew fletcher) add method to make the database interact correctly
         // pin code is currently 2345
         try {
             ActivityScenario.launch(PinPage.class);
@@ -70,12 +70,12 @@ public class PinPageTest {
         onView(withId(R.id.pin_pad_OK)).perform(click());
 
         // page should still be visible
-        // TODO add a check that it has moved onto the next page
+        // TODO (matthew fletcher) add a check that it has moved onto the next page
     }
 
     @Test
     public void check_with_back_space() {
-        // TODO add method to make the database interact correctly
+        // TODO (matthew fletcher) add method to make the database interact correctly
         // pin code is currently 2345
         try {
             ActivityScenario.launch(PinPage.class);
@@ -86,13 +86,13 @@ public class PinPageTest {
         onView(withId(R.id.pin_pad_02)).perform(click());
         onView(withId(R.id.pin_pad_back_space)).perform(click());
 
-        // TODO should check to see if no dots are available
+        // TODO (matthew fletcher) should check to see if no dots are available
         // could also add cases for back space if nothing was added
     }
 
     @Test
     public void check_dots_change() {
-        // TODO add method to make the database interact correctly
+        // TODO (matthew fletcher) add method to make the database interact correctly
         // pin code is currently 2345
         try {
             ActivityScenario.launch(PinPage.class);
@@ -102,9 +102,9 @@ public class PinPageTest {
 
         onView(withId(R.id.pin_pad_02)).perform(click());
 
-        // TODO should check to see if the dots change
+        // TODO (matthew fletcher) should check to see if the dots change
     }
 
-    // TODO add cases for the save not just check
+    // TODO (matthew fletcher) add cases for the save not just check
 
 }

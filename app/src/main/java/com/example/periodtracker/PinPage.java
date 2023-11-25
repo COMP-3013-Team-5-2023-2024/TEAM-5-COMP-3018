@@ -45,7 +45,7 @@ public class PinPage extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        // TODO check to see if this happens when final is called
+        // TODO (matthew fletcher) check to see if this happens when final is called
         if (this.saveCheck == PinPageState.SAVE) {
             setStoredPin("");
         }
@@ -115,7 +115,7 @@ public class PinPage extends AppCompatActivity implements View.OnClickListener {
     }
 
 
-    // TODO should be part of another class
+    // TODO (matthew fletcher) should be part of another class
     private String getStoredPin() {
         // need to actually implement this thing
         String pin = "2345";
@@ -126,7 +126,7 @@ public class PinPage extends AppCompatActivity implements View.OnClickListener {
     }
 
 
-    // TODO should be part of another class
+    // TODO (matthew fletcher) should be part of another class
     private Void setStoredPin(String pin) {
         // PinToTest
         return null;
@@ -163,7 +163,7 @@ public class PinPage extends AppCompatActivity implements View.OnClickListener {
 
     private void badPinAnimation() {
         Toast.makeText(this, "not the same pin", Toast.LENGTH_SHORT).show();
-        // TODO add a failure thing here if they get it wrong
+        // TODO (matthew fletcher) add a failure thing here if they get it wrong
     }
 
     private void resetPinPage() {
