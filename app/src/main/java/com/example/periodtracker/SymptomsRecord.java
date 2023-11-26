@@ -4,10 +4,11 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.TypeConverter;
-
 import java.time.LocalDate;
 
-
+/**
+ * SymptomsRecord is an object that represents a symptoms record within the database.
+ */
 @Entity
 public class SymptomsRecord {
 
@@ -23,6 +24,9 @@ public class SymptomsRecord {
     @ColumnInfo
     public String symptoms;
 
+    /**
+     * Converts date attribute between Long and LocalDate object.
+     */
     public static class Converters {
         @TypeConverter
         public static LocalDate fromTimestamp(Long value) {

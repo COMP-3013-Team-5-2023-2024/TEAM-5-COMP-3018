@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Group_5_project</string>
+    <string name="database_name">PeriodTrackerDatabase</string>
 
     <string name="mood_label">Mood:</string>
     <string name="calm_label">Calm</string>
@@ -14,7 +15,7 @@
     <string name="cravings_label">Cravings</string>
     <string name="tender_label">Tender Breasts</string>
 
-    <string name="symptoms_input">Symptoms Input</string>
+    <string name="symptoms_input">Add new Symptoms</string>
     <string name="symptoms_text">Type your symptoms here.</string>
     <string name="mood_text">Type your mood here.</string>
 

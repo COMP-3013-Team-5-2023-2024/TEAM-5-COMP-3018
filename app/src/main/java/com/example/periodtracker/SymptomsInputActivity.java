@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.room.Room;
 import com.example.periodtracker.databinding.ActivitySymptomsInputBinding;
+import java.time.LocalDate;
 
 /**
  * SymptomsInputActivity is the class that allows the user to input and store their symptomsRecord.
@@ -30,7 +31,9 @@ public class SymptomsInputActivity extends AppCompatActivity {
     public void onSaveClick(View view) {
         // Android room access has to be in background thread.
         new Thread(() -> {
-            AppDatabase database = Room.databaseBuilder(this, AppDatabase.class, "symptomsDB").build();
+            symptomsRecord.date = LocalDate.now();
+
+            AppDatabase database = Room.databaseBuilder(this, AppDatabase.class, getString(R.string.database_name)).build();
             SymptomsDao symptomsDao = database.symptomsDAO();
             if (symptomsDao != null) {
                 symptomsDao.insertAll(symptomsRecord);
