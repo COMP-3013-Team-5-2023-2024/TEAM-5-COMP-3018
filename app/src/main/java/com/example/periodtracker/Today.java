@@ -23,7 +23,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class Today extends AppCompatActivity {
 
     private TextView displayDay;
     private TextView displayMonth;
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_today);
 
         minPrediction = findViewById(R.id.minPredictionText);
         maxPrediction = findViewById(R.id.maxPredictionText);
@@ -85,16 +85,16 @@ public class MainActivity extends AppCompatActivity {
         // Perform item selected listener
         bottomNavigationView.setOnItemSelectedListener(item -> {
             if(item.getItemId() == R.id.health){
-                    startActivity(new Intent(getApplicationContext(),Health.class));
-                    overridePendingTransition(0,0);
+                startActivity(new Intent(getApplicationContext(),Health.class));
+                overridePendingTransition(0,0);
                 return true;
             }
             else if(item.getItemId() == R.id.today){
                 return true;
             }
             else if(item.getItemId() == R.id.symptoms){
-                    startActivity(new Intent(getApplicationContext(), SymptomsActivity.class));
-                    overridePendingTransition(0,0);
+                startActivity(new Intent(getApplicationContext(), SymptomsActivity.class));
+                overridePendingTransition(0,0);
                 return true;
             }
             else{
