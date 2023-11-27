@@ -25,4 +25,9 @@
     <string name="mood_text">Type your mood here.</string>
 
     <string name="save_label">Save</string>
+
+    <string name="select_date">Select a Date</string>
+    <string name="prediction_label">Predictions</string>
+    <string name="earliest_prediction">Earliest Date</string>
+    <string name="latest_prediction">Latest Date</string>
 </resources>
