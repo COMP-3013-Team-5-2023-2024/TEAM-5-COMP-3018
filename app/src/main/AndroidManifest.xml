@@ -32,7 +32,7 @@
 
         <activity
             android:name=".Today"
-            android:exported="true"></activity>
+            android:exported="false"></activity>
 
         <receiver android:name=".NotificationAlarmManager" />
 
