@@ -44,8 +44,8 @@ android {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                    getDefaultProguardFile("proguard-android-optimize.txt"),
-                    "proguard-rules.pro"
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
             )
             enableAndroidTestCoverage  = true
             enableUnitTestCoverage = true
@@ -73,6 +73,9 @@ dependencies {
     val room_version = "2.6.0"
     implementation("androidx.room:room-runtime:$room_version")
     annotationProcessor("androidx.room:room-compiler:$room_version")
+
+    val material_design_version = "1.5.0"
+    implementation ("com.google.android.material:material:$material_design_version")
 }
 
 jacoco{
