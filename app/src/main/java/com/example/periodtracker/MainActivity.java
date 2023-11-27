@@ -1,9 +1,13 @@
 package com.example.periodtracker;
 
+
+import android.Manifest;
 import android.os.Bundle;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.Button;
@@ -20,6 +24,14 @@ public class MainActivity extends AppCompatActivity {
     private Calendar currentDate;
     private Locale locale;
     private AlphaAnimation buttonClickAnimation;
+
+    /**
+     * Required permissions for the app to work.
+     */
+    static final String[] REQUIRED_PERMISSIONS = {
+            Manifest.permission.POST_NOTIFICATIONS,
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,5 +90,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        ActivityResultContracts.RequestMultiplePermissions resultContract = new ActivityResultContracts.RequestMultiplePermissions();
+        ActivityResultLauncher<String[]> multiplePermLauncher = registerForActivityResult(resultContract,
+                isGranted -> {
+                    // Any permission specific code put here:
+                });
+        multiplePermLauncher.launch(REQUIRED_PERMISSIONS);
+
     }
+
 }
