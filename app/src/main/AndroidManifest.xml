@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Group_5_project"
         tools:targetApi="31">
         <activity
-            android:name=".Symptoms"
+            android:name=".SymptomsActivity"
             android:exported="false" />
         <activity
             android:name=".Health"
@@ -29,7 +29,14 @@
             </intent-filter>
         </activity>
 
+
         <receiver android:name=".NotificationAlarmManager"/>
+
+        <activity
+            android:name=".SymptomsInputActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
     </application>
 
 </manifest>

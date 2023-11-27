@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
             else if(item.getItemId() == R.id.symptoms){
-                    startActivity(new Intent(getApplicationContext(),Symptoms.class));
+                    startActivity(new Intent(getApplicationContext(), SymptomsActivity.class));
                     overridePendingTransition(0,0);
                 return true;
             }

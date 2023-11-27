@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="symptom"
+            type="com.example.periodtracker.SymptomsRecord" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SymptomsInputActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/symptoms_input"
+                    android:textSize="30dp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"></Space>
+
+                <TextView
+                    android:id="@+id/moodLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24dp"
+                    android:text="@string/mood_label" />
+
+                <EditText
+                    android:id="@+id/editTextText3"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:ems="10"
+                    android:hint="@string/mood_text"
+                    android:inputType="textMultiLine"
+                    android:text="@={symptom.mood}" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"></Space>
+
+                <TextView
+                    android:id="@+id/symptomsLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/symptoms_label"
+                    android:textSize="24dp" />
+
+                <EditText
+                    android:id="@+id/editTextText"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:ems="10"
+                    android:inputType="textMultiLine"
+                    android:hint="@string/symptoms_text"
+                    android:text="@={symptom.symptoms}"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"></Space>
+
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onSaveClick"
+                    android:text="@string/save_label" />
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
