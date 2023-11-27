@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Group_5_project"
         tools:targetApi="31">
         <activity
+            android:name=".SymptomsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Health"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -20,6 +26,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".SymptomsInputActivity"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 
