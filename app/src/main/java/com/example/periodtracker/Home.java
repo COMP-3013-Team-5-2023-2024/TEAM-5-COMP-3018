@@ -13,7 +13,7 @@ public class Home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
         LocalDate today = LocalDate.now();
         LocalDate yest = today.minusDays(1);
         LocalDate tomo = today.plusDays(1);
@@ -38,6 +38,7 @@ public class Home extends AppCompatActivity {
             case(10):{monthView.setText("Oct");}
             case(11):{monthView.setText("Nov");}
             case(12):{monthView.setText("Dec");}
+            break;
         }
     }
 }
