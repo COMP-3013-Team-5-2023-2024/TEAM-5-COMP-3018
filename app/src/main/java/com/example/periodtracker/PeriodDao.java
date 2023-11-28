@@ -21,8 +21,8 @@ public interface PeriodDao {
     @Insert
     void insertAll(PeriodRecord... periods);
 
-//    @Query("SELECT * FROM PeriodRecord WHERE startDate = :date")
-//    public SymptomsRecord findPeriodWithStartDate(LocalDate date);
+    @Query("SELECT * FROM PeriodRecord WHERE startDate = :date")
+    PeriodRecord findPeriodWithStartDate(LocalDate date);
 
     @Update(onConflict = OnConflictStrategy.REPLACE)
     void updatePeriodRecord(PeriodRecord period);

@@ -12,11 +12,20 @@ public class MenstrualCycleTracker {
         public LocalDate startDate;
         public LocalDate minEndDate;
         public LocalDate maxEndDate;
+        public LocalDate ovulation;
+        public LocalDate nextPeriodDate;
 
         public PeriodPrediction() {
         }
     }
 
+    /**
+     * Calculates period predictions for period end dates, ovulation and next period date.
+     *
+     * @param inputDate LocalDate of a user's last period.
+     * @return PeriodPrediction object containing LocalDates for ovulation, period end dates and next
+     * period date.
+     */
     public static PeriodPrediction trackMenstrualCycle(LocalDate inputDate) {
 
         ZoneId defaultZoneId = ZoneId.systemDefault();
@@ -50,6 +59,12 @@ public class MenstrualCycleTracker {
         predictedPeriod.maxEndDate = LocalDate.of(endDateMax.get(Calendar.YEAR),
                 endDateMax.get(Calendar.MONTH) + 1, // Months in Calendar start from 0
                 endDateMax.get(Calendar.DAY_OF_MONTH)) ;
+        predictedPeriod.ovulation = LocalDate.of(ovulationDate.get(Calendar.YEAR),
+                ovulationDate.get(Calendar.MONTH) + 1, // Months in Calendar start from 0
+                ovulationDate.get(Calendar.DAY_OF_MONTH)) ;
+        predictedPeriod.nextPeriodDate = LocalDate.of(nextCycleDate.get(Calendar.YEAR),
+                nextCycleDate.get(Calendar.MONTH) + 1, // Months in Calendar start from 0
+                nextCycleDate.get(Calendar.DAY_OF_MONTH)) ;
 
         return predictedPeriod;
     }
