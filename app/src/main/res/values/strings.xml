@@ -19,6 +19,7 @@
     <string name="symptoms_text">Type your symptoms here. Eg: Cramps, Headache</string>
     <string name="mood_text">Type your mood here. Eg: Happy, Tired</string>
 
+    <string name="delete_label">Delete</string>
     <string name="save_label">Save</string>
 
     <string name="select_date">Select your period start date</string>
