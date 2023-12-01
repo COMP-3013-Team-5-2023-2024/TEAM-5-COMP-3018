@@ -32,4 +32,9 @@
     <string name="health_page_recycle_view_title_1">FAQs</string>
     <string name="health_page_recycle_view_title_2">Reproductive health</string>
     <string name="health_page_recycle_view_title_3">Pre-period days</string>
+
+    <string name="select_date">Select a Date</string>
+    <string name="prediction_label">Predictions</string>
+    <string name="earliest_prediction">Earliest Date</string>
+    <string name="latest_prediction">Latest Date</string>
 </resources>

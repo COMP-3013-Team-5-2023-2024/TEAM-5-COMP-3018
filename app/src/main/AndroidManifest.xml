@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -20,7 +21,7 @@
             android:name=".Health"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Home"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,14 +30,17 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".Today"
+            android:exported="false"></activity>
 
-        <receiver android:name=".NotificationAlarmManager"/>
+        <receiver android:name=".NotificationAlarmManager" />
 
         <activity
             android:name=".SymptomsInputActivity"
-            android:screenOrientation="portrait">
-        </activity>
-
+            android:screenOrientation="portrait"></activity>
     </application>
+
+
 
 </manifest>

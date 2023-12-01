@@ -58,24 +58,27 @@ public class Health extends AppCompatActivity {
 
         // add this to the bottom of pages for navigation
         // Initialize and assign variable
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
 
         // Set to highlight current page
         bottomNavigationView.setSelectedItemId(R.id.health);
 
         // Perform item selected listener
         bottomNavigationView.setOnItemSelectedListener(item -> {
-            if (item.getItemId() == R.id.today) {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                overridePendingTransition(0, 0);
+            if(item.getItemId() == R.id.today){
+                startActivity(new Intent(getApplicationContext(), Home.class));
+                overridePendingTransition(0,0);
                 return true;
-            } else if (item.getItemId() == R.id.health) {
+            }
+            else if(item.getItemId() == R.id.health){
                 return true;
-            } else if (item.getItemId() == R.id.symptoms) {
+            }
+            else if(item.getItemId() == R.id.symptoms){
                 startActivity(new Intent(getApplicationContext(), SymptomsActivity.class));
-                overridePendingTransition(0, 0);
+                overridePendingTransition(0,0);
                 return true;
-            } else {
+            }
+            else{
                 return false;
             }
         });
