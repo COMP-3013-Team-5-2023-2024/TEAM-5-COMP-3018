@@ -16,6 +16,9 @@ public class QAAdaptor extends RecyclerView.Adapter<QAAdaptor.ViewHolder> {
     ArrayList<QuestionAnswerData> questionAnswerList;
     Context context;
 
+    /**
+     * creates the QA adaptor requires questionAnswer datatype
+     */
     public QAAdaptor(ArrayList<QuestionAnswerData> questionAnswerList, Context context) {
         this.questionAnswerList = questionAnswerList;
         this.context = context;
@@ -25,15 +28,14 @@ public class QAAdaptor extends RecyclerView.Adapter<QAAdaptor.ViewHolder> {
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.question_answer_item, parent, false);
         return new QAAdaptor.ViewHolder(view);
-
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
         QuestionAnswerData data = questionAnswerList.get(position);
-        holder.questionText.setText(data.question);
-        holder.questionText.setText(data.answer);
+        holder.questionText.setText(data.getQuestion());
+        holder.answerText.setText(data.getAnswer());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,6 +71,10 @@ public class QAAdaptor extends RecyclerView.Adapter<QAAdaptor.ViewHolder> {
             questionLayout = view.findViewById(R.id.question_answer_question_layout);
         }
 
+
+        /**
+         * changes the visibility of the two objects
+         */
         public void changeState() {
             if (state == QAState.Question) {
                 state = QAState.Answer;

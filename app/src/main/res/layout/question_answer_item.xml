@@ -3,6 +3,7 @@
     android:id="@+id/question_answer_layout"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_margin="5sp"
     android:background="@drawable/no_border_rounded_corner_layout"
     android:clipToOutline="true">
 
@@ -19,6 +20,7 @@
             android:id="@+id/question_answer_question_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textAlignment="center"
             android:textColor="@color/tracker_white"
             android:textSize="24sp" />
 
@@ -30,12 +32,15 @@
         android:layout_height="150sp"
         android:background="@color/tracker_grey"
         android:padding="5sp"
+        android:gravity="center"
         android:visibility="gone">
 
         <TextView
             android:id="@+id/question_answer_answer_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/tracker_white"
+            android:textAlignment="center"
             android:textSize="10sp" />
     </LinearLayout>
 </LinearLayout>

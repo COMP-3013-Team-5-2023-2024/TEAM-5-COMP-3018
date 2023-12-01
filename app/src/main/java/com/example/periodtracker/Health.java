@@ -2,8 +2,11 @@ package com.example.periodtracker;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -22,7 +25,8 @@ public class Health extends AppCompatActivity {
         RecyclerView recyclerView2 = findViewById(R.id.health_page_recycle_view_2);
         RecyclerView recyclerView3 = findViewById(R.id.health_page_recycle_view_3);
 
-        // TODO (matthew fletcher) add a database for the questions / answers (should be stored on creation)
+        //these are static data values in the future could be a database
+
 
         ArrayList<QuestionAnswerData> qa1 = new ArrayList<>();
         qa1.add(new QuestionAnswerData("When can I get pregnant?", "You are the most fertile during ovulation approximately 10 to 16 days before your next period, but there is still a chance of getting pregnant during any point in your cycle.", Optional.empty()));
@@ -41,6 +45,12 @@ public class Health extends AppCompatActivity {
         qa3.add(new QuestionAnswerData("Spotting vs period bleeding", "Spotting and bleeding are not the same thing, spotting is the light bleeding that occurs outside of your regular menstrual cycle. Bleeding, on the other hand is a heavier blood flow that occurs during your period.", Optional.empty()));
         qa3.add(new QuestionAnswerData("How stress affects your period", "Stress can effect the timing of your period making it occur earlier later or even missing the period entirely. To reduce stress you can try meditation, breathing exercises or connecting with others and talking to them about how you feel.", Optional.empty()));
         qa3.add(new QuestionAnswerData("Is it safe to have sex during your period?", "Unless it troubles you, there's no reason to avoid sexual activity during your period though it can be a bit messy, it is safe.", Optional.empty()));
+
+
+        recyclerView1.setLayoutManager(new LinearLayoutManager(this , LinearLayoutManager.HORIZONTAL, false));
+        recyclerView2.setLayoutManager(new LinearLayoutManager(this , LinearLayoutManager.HORIZONTAL, false));
+        recyclerView3.setLayoutManager(new LinearLayoutManager(this , LinearLayoutManager.HORIZONTAL, false));
+
 
         recyclerView1.setAdapter(new QAAdaptor(qa1, getApplicationContext()));
         recyclerView2.setAdapter(new QAAdaptor(qa2, getApplicationContext()));

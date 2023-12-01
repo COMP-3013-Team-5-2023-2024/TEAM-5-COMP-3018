@@ -3,11 +3,19 @@ package com.example.periodtracker;
 import java.util.Optional;
 
 public class QuestionAnswerData {
-    String question;
-    String answer;
-    //TODO (matthew fletcher) could add this in the future
-    Optional<String> questionImageUrl;
+    private String question;
+    private String answer;
+    //TODO could add images to the data
+    private Optional<String> questionImageUrl;
 
+
+    /**
+     * Simple storage class
+     *
+     * @param question
+     * @param answer
+     * @param imageUrl
+     */
     QuestionAnswerData(String question, String answer, Optional<String> imageUrl) {
         this.question = question;
         this.answer = answer;
