@@ -4,6 +4,6 @@
     <color name="tracker_white">#FFFFFFFF</color>
     <color name="tracker_pink">#FFD502A7</color>
     <color name="tracker_blue">#FF00FFFF</color>
-    <color name="tracker_grey">#FFC9C9C9</color>
+    <color name="tracker_grey">#FF999999</color>
     <color name="tracker_green">#FF24FF00</color>
 </resources>
