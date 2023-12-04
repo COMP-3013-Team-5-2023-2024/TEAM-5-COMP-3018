@@ -9,8 +9,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.datepicker.MaterialDatePicker;
@@ -58,29 +56,13 @@ public class Today extends AppCompatActivity {
         displayDay.setText(String.valueOf(currentDate.get(Calendar.DAY_OF_MONTH)));
         displayMonth.setText(currentDate.getDisplayName(Calendar.MONTH, Calendar.SHORT, locale));
 
-        Button btn_tick = findViewById(R.id.btn_tick);
-        btn_tick.setOnClickListener(v -> {
-            ImageView periodBtnTick = findViewById(R.id.periodBtnTick);
-            v.startAnimation(buttonClickAnimation);
-            int visibility = periodBtnTick.getVisibility();
-            if(visibility == View.VISIBLE)
-            {
-                periodBtnTick.startAnimation(buttonClickAnimation);
-                periodBtnTick.setVisibility(View.GONE);
-            }
-            else
-            {
-                periodBtnTick.setVisibility(View.VISIBLE);
-            }
-        });
-
 
         // add this to the bottom of pages for navigation
         // Initialize and assign variable
         BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
 
         // Set to highlight current page, edit item id according to button id
-        bottomNavigationView.setSelectedItemId(R.id.today);
+        bottomNavigationView.setSelectedItemId(R.id.home);
 
         // Perform item selected listener
         bottomNavigationView.setOnItemSelectedListener(item -> {
@@ -89,7 +71,9 @@ public class Today extends AppCompatActivity {
                 overridePendingTransition(0,0);
                 return true;
             }
-            else if(item.getItemId() == R.id.today){
+            else if(item.getItemId() == R.id.home){
+                startActivity(new Intent(getApplicationContext(),Home.class));
+                overridePendingTransition(0,0);
                 return true;
             }
             else if(item.getItemId() == R.id.symptoms){
