@@ -53,6 +53,10 @@ public class Home extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), SymptomsActivity.class));
                 overridePendingTransition(0,0);
                 return true;
+            } else if (item.getItemId() == R.id.period) {
+                startActivity(new Intent(this, PeriodActivity.class));
+                overridePendingTransition(0,0);
+                return true;
             }
             else{
                 return false;
