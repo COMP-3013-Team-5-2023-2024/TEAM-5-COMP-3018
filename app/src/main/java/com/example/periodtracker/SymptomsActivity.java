@@ -17,7 +17,7 @@ public class SymptomsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_symptoms);
-        RecyclerView recyclerView = findViewById(R.id.symptomRecyclerView);
+        RecyclerView recyclerView = findViewById(R.id.periodRecyclerView);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         SymptomRecyclerViewAdapter adapter = new SymptomRecyclerViewAdapter(this);
@@ -41,6 +41,10 @@ public class SymptomsActivity extends AppCompatActivity {
             } else if (item.getItemId() == R.id.health) {
                 startActivity(new Intent(this, Health.class));
                 overridePendingTransition(0, 0);
+                return true;
+            } else if (item.getItemId() == R.id.period) {
+                startActivity(new Intent(this, PeriodActivity.class));
+                overridePendingTransition(0,0);
                 return true;
             } else {
                 return false;

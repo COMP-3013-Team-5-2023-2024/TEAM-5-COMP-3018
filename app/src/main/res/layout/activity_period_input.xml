@@ -5,8 +5,8 @@
 
     <data>
         <variable
-            name="symptom"
-            type="com.example.periodtracker.SymptomsRecord" />
+            name="period"
+            type="com.example.periodtracker.PeriodRecord" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -28,7 +28,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/symptoms_input"
+                    android:text="@string/period_input"
                     android:textSize="30dp" />
 
                 <Space
@@ -39,17 +39,16 @@
                     android:id="@+id/startLabel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="24dp"
-                    android:text="@string/mood_label" />
+                    android:text="@string/startdate"
+                    android:textSize="24dp" />
 
                 <EditText
-                    android:id="@+id/editTextText3"
+                    android:id="@+id/startTextDate"
                     android:layout_width="match_parent"
-                    android:layout_height="170dp"
+                    android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="@string/mood_text"
-                    android:inputType="textMultiLine"
-                    android:text="@={symptom.mood}" />
+                    android:inputType="date"
+                    android:focusableInTouchMode="false"/>
 
                 <Space
                     android:layout_width="match_parent"
@@ -59,17 +58,16 @@
                     android:id="@+id/endLabel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/symptoms_label"
+                    android:text="@string/enddate"
                     android:textSize="24dp" />
 
                 <EditText
-                    android:id="@+id/editTextText"
+                    android:id="@+id/endTextDate"
                     android:layout_width="match_parent"
-                    android:layout_height="170dp"
+                    android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textMultiLine"
-                    android:hint="@string/symptoms_text"
-                    android:text="@={symptom.symptoms}"/>
+                    android:inputType="date"
+                    android:focusableInTouchMode="false"/>
 
                 <Space
                     android:layout_width="match_parent"

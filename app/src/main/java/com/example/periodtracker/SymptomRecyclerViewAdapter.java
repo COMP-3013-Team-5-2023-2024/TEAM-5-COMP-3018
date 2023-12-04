@@ -53,14 +53,14 @@ public class SymptomRecyclerViewAdapter extends RecyclerView.Adapter<SymptomRecy
         /**
          * Binds symptom record data to the view.
          *
-         * @param record SymptomRecord data to be displayed.
+         * @param periodRecord SymptomRecord data to be displayed.
          */
-        public void bind(SymptomsRecord record) {
-            this.record = record;
-            String date = record.date.format(DateTimeFormatter.ofPattern("yyyy/MM/dd"));
+        public void bind(SymptomsRecord periodRecord) {
+            this.periodRecord = periodRecord;
+            String date = periodRecord.date.format(DateTimeFormatter.ofPattern("yyyy/MM/dd"));
             dateText.setText(date);
-            symptomText.setText(record.symptoms);
-            moodText.setText(record.mood);
+            symptomText.setText(periodRecord.symptoms);
+            moodText.setText(periodRecord.mood);
         }
 
     }
