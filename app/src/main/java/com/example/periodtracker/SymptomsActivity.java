@@ -32,7 +32,7 @@ public class SymptomsActivity extends AppCompatActivity {
 
         // Perform item selected listener
         bottomNavigationView.setOnItemSelectedListener(item -> {
-            if (item.getItemId() == R.id.today) {
+            if (item.getItemId() == R.id.home) {
                 startActivity(new Intent(this, Home.class));
                 overridePendingTransition(0, 0);
                 return true;

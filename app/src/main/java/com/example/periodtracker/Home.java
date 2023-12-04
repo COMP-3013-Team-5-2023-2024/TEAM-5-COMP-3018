@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
@@ -31,6 +33,31 @@ public class Home extends AppCompatActivity {
         final TextView monthView = findViewById(R.id.textView);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM", Locale.ENGLISH);
         monthView.setText(today.format(formatter));
+        BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
+
+        // Set to highlight current page
+        bottomNavigationView.setSelectedItemId(R.id.home);
+        // Perform item selected listener
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            if(item.getItemId() == R.id.home){
+                startActivity(new Intent(getApplicationContext(), Home.class));
+                overridePendingTransition(0,0);
+                return true;
+            }
+            else if(item.getItemId() == R.id.health){
+                startActivity(new Intent(getApplicationContext(), Health.class));
+                overridePendingTransition(0,0);
+                return true;
+            }
+            else if(item.getItemId() == R.id.symptoms){
+                startActivity(new Intent(getApplicationContext(), SymptomsActivity.class));
+                overridePendingTransition(0,0);
+                return true;
+            }
+            else{
+                return false;
+            }
+        });
     }
 
     public void onYestPressed(View v){}
@@ -43,11 +70,4 @@ public class Home extends AppCompatActivity {
         startActivity(new Intent(this, Today.class));
     }
 
-    public void onHealthPressed(View v){
-        startActivity(new Intent(this, Health.class));
-    }
-
-    public void onSymptomsPressed(View v){
-        startActivity(new Intent(this, SymptomsActivity.class));
-    }
 }

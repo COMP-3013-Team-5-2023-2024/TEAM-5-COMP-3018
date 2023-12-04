@@ -1,10 +1,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/today"
-        android:title="Today"
-        android:icon="@drawable/baseline_calendar_today_24" />
     <item android:id="@+id/health"
         android:title="Health"
         android:icon="@drawable/baseline_health_and_safety_24" />
+    <item android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/baseline_calendar_today_24" />
     <item android:id="@+id/symptoms"
         android:title="Symptoms"
         android:icon="@drawable/baseline_question_mark_24" />
