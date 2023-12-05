@@ -22,7 +22,14 @@
     <string name="delete_label">Delete</string>
     <string name="save_label">Save</string>
 
-    <string name="select_date">Select your period start date</string>
+    <string name="health_page_cycle_length">your cycle length</string>
+    <string name="health_page_days">days</string>
+    <string name="health_page_period_duration">your period duration</string>
+    <string name="health_page_recycle_view_title_1">FAQs</string>
+    <string name="health_page_recycle_view_title_2">Reproductive health</string>
+    <string name="health_page_recycle_view_title_3">Pre-period days</string>
+
+    <string name="select_date">Select a Date</string>
     <string name="prediction_label">Predictions</string>
     <string name="earliest_prediction">Earliest Date</string>
     <string name="latest_prediction">Latest Date</string>
