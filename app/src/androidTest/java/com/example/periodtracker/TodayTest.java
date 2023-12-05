@@ -14,52 +14,52 @@ import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import java.time.Instant;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 import java.util.Locale;
 
 @RunWith(AndroidJUnit4ClassRunner.class)
-public class HomeTest {
+public class TodayTest {
 
     @Test
-    public void home_in_view(){
+    public void today_in_view(){
         try {
-            ActivityScenario.launch(Home.class);
+            ActivityScenario.launch(Today.class);
         } catch (Exception e) {
             fail();
         }
-        onView(withId(R.id.button)).check(matches(isDisplayed()));
-    }
-
-
-    @Test
-    public void edit_button_pressed(){
-        try {
-            ActivityScenario.launch(Home.class);
-        } catch (Exception e) {
-            fail();
-        }
-        onView(withId(R.id.button4)).perform(click());
-
         onView(withId(R.id.dateOval)).check(matches(isDisplayed()));
     }
 
 
     @Test
-    public void page_displayed_correctly(){
+    public void activity_displayed_correctly(){
         try {
-            ActivityScenario.launch(Home.class);
+            ActivityScenario.launch(Today.class);
         } catch (Exception e) {
             fail();
         }
-        LocalDate today = LocalDate.now();
-        onView(withId(R.id.button)).check(matches(withText(Integer.toString(today.getDayOfMonth()))));
-        onView(withId(R.id.button2)).check(matches(withText(Integer.toString(today.minusDays(1).getDayOfMonth()))));
-        onView(withId(R.id.button3)).check(matches(withText(Integer.toString(today.plusDays(1).getDayOfMonth()))));
+        Calendar currentDate = Calendar.getInstance();
+        Locale locale = Locale.getDefault();
+        onView(withId(R.id.day)).check(matches(withText(String.valueOf(currentDate.get(Calendar.DAY_OF_MONTH)))));
+        onView(withId(R.id.month)).check(matches(withText(currentDate.getDisplayName(Calendar.MONTH, Calendar.SHORT, locale))));
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM", Locale.ENGLISH);
-        onView(withId(R.id.textView)).check(matches(withText(today.format(formatter))));
     }
 
+
+    @Test
+    public void date_select(){
+        try {
+            ActivityScenario.launch(Today.class);
+        } catch (Exception e) {
+            fail();
+        }
+
+
+    }
 
 }
