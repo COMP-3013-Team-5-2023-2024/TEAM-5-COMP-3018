@@ -65,7 +65,7 @@ public class Health extends AppCompatActivity {
 
         // Perform item selected listener
         bottomNavigationView.setOnItemSelectedListener(item -> {
-            if(item.getItemId() == R.id.today){
+            if(item.getItemId() == R.id.home){
                 startActivity(new Intent(getApplicationContext(), Home.class));
                 overridePendingTransition(0,0);
                 return true;

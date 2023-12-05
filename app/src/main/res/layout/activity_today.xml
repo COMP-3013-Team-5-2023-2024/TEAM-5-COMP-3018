@@ -50,32 +50,6 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/btn_tick"
-        android:layout_width="355dp"
-        android:layout_height="51dp"
-        android:layout_marginBottom="400dp"
-        android:gravity="center_vertical"
-        android:outlineProvider="none"
-        android:text="Period"
-        android:textColor="@color/tracker_pink"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:focusable="true" />
-
-    <ImageView
-        android:id="@+id/periodBtnTick"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="412dp"
-        android:src="@drawable/baseline_check_24"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.863"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
         android:id="@+id/symptomsTitle"
         android:layout_width="119dp"
@@ -101,8 +75,8 @@
 
     <Button
         android:id="@+id/dateSelectButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="257dp"
+        android:layout_height="53dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:onClick="onSelectDateClick"

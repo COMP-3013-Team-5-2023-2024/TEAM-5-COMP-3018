@@ -41,7 +41,7 @@ public class SymptomsInputActivity extends AppCompatActivity {
             database.close();
         }).start();
 
-        Intent mainIntent = new Intent(this, Home.class);
+        Intent mainIntent = new Intent(this, SymptomsActivity.class);
         startActivity(mainIntent);
     }
 

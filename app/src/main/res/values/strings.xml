@@ -7,25 +7,22 @@
     <string name="notification_content">You have a new notification.</string>
     <string name="database_name">PeriodTrackerDatabase</string>
 
+    <string name="today_page">Today Page</string>
+    <string name="home_page">Home Page</string>
+    <string name="health_page">Health Page</string>
+    <string name="symptoms_page">Symptoms Page</string>
+
     <string name="mood_label">Mood:</string>
-    <string name="calm_label">Calm</string>
-    <string name="happy_label">Happy</string>
-    <string name="sad_label">Sad</string>
-    <string name="irritated_label">Irritated</string>
-    <string name="moody_label">Mood Swings</string>
     <string name="symptoms_label">Symptoms:</string>
-    <string name="fine_label">Everything is fine</string>
-    <string name="cramps_label">Cramps</string>
-    <string name="headache_label">Headache</string>
-    <string name="cravings_label">Cravings</string>
-    <string name="tender_label">Tender Breasts</string>
 
     <string name="symptoms_input">Add new Symptoms</string>
-    <string name="symptoms_text">Type your symptoms here.</string>
-    <string name="mood_text">Type your mood here.</string>
+    <string name="symptoms_text">Type your symptoms here. Eg: Cramps, Headache</string>
+    <string name="mood_text">Type your mood here. Eg: Happy, Tired</string>
 
+    <string name="delete_label">Delete</string>
     <string name="save_label">Save</string>
 
+    <string name="select_date">Select your period start date</string>
     <string name="health_page_cycle_length">your cycle length</string>
     <string name="health_page_days">days</string>
     <string name="health_page_period_duration">your period duration</string>

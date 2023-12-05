@@ -76,6 +76,11 @@ dependencies {
 
     val material_design_version = "1.5.0"
     implementation ("com.google.android.material:material:$material_design_version")
+
+    androidTestImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test:runner:1.5.2")
+    androidTestImplementation("androidx.test:core:1.1.5")
+    androidTestImplementation("androidx.test.ext:junit-ktx:1.1.5")
 }
 
 jacoco{

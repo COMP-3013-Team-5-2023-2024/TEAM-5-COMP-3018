@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
@@ -24,6 +25,7 @@ public class SymptomRecyclerViewAdapter extends RecyclerView.Adapter<SymptomRecy
         private TextView dateText;
         private TextView symptomText;
         private TextView moodText;
+        private Button deleteButton;
         private SymptomsRecord record;
 
         /**
@@ -36,6 +38,16 @@ public class SymptomRecyclerViewAdapter extends RecyclerView.Adapter<SymptomRecy
             dateText = itemView.findViewById(R.id.dateText);
             symptomText = itemView.findViewById(R.id.symptomsText);
             moodText = itemView.findViewById(R.id.moodText);
+            deleteButton = itemView.findViewById(R.id.deleteButton);
+            deleteButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    records.remove(record);
+                    symptomsDao.delete(record);
+                    notifyItemRemoved(getAdapterPosition());
+                    notifyItemRangeChanged(getAdapterPosition(), 1);
+                }
+            });
         }
 
         /**
