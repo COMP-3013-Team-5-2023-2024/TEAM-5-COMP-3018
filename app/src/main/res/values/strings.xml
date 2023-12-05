@@ -22,7 +22,6 @@
     <string name="delete_label">Delete</string>
     <string name="save_label">Save</string>
 
-    <string name="select_date">Select your period start date</string>
     <string name="health_page_cycle_length">your cycle length</string>
     <string name="health_page_days">days</string>
     <string name="health_page_period_duration">your period duration</string>
