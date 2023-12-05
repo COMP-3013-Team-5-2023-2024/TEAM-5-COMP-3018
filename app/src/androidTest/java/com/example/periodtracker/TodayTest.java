@@ -48,7 +48,6 @@ public class TodayTest {
         onView(withId(R.id.day)).check(matches(withText(String.valueOf(currentDate.get(Calendar.DAY_OF_MONTH)))));
         onView(withId(R.id.month)).check(matches(withText(currentDate.getDisplayName(Calendar.MONTH, Calendar.SHORT, locale))));
 
-        // TODO (matthew fletcher) need to find out how to check the min / max prediction
     }
 
 
@@ -61,7 +60,6 @@ public class TodayTest {
         }
 
 
-        // TODO (matthew fletcher) need to find out how the onClick works
     }
 
 }
